@@ -1,60 +1,45 @@
-.header{width: 100%; height: 20vh;
-/*background-color: red;*/
-position: relative;}
-.header h2{font-size: 30px; display: inline-block; 
-position: absolute;
-bottom: 30px; left: 50%;
-transform: translateX(-50%)}
-.header {}
-
-.main{height: 80vh; background-color: white; padding: 0 50px;
-position: relative}
-
-.main .aside{
+main{
+    height: 850px; 
+    padding: 80px 50px 0;
+    
+    position: relative;
+}
+/* aside */
+main .aside{
     position: absolute;
     list-style: none;
     padding: 10px;
 }
-.main .aside a{
-    padding: 0px 0;
-/*    border: 1px solid black;*/
-    list-style: none;
-    text-decoration: none;
-    color: black;
-}
-.main .aside a li{
-    padding: 5px;
-/*    transition: all 1s;*/
+main .aside li{
+    margin: 10px;
     
 }
-.main .aside li:hover{
+main .aside a:hover{
     color: white;
     background-color: black;
 }
 
-
-.main .inner{width: 70%; height: 80%; background-color: gray;
+/*item*/
+main .items{
+    width: 750px; 
+    height: 2500px; 
     margin: 0 auto;
-/*    padding: 20px; */
-    box-sizing: border-box;
-    position: relative;}
-
-.main .inner .menu{
-    width: 20%; 
-    position: absolute;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: relative;
+}
+main .item{
+    width: 32%;
+/*    height: 250px;*/
+    object-fit:contain;
+    margin-bottom: 2%;
     
-    text-align: center;
-/*    background-color: red;*/
+    float: left;
+}
+main img{
+    display: block;
+    width: 100%;
+}
+main .item:nth-of-type(3n+1),
+main .item:nth-of-type(3n+2){
+    margin-right: 2%;
 }
 
-.menu li{
-    list-style: none;
-    padding: 10px 0;
-    
-}
-.menu li:hover{
-
-}
-
-.menu
