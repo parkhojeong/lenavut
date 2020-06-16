@@ -1,13 +1,14 @@
 main{
-    height: 850px;
-    padding: 50px;
+    height: 700px;
+    padding: 50px 0 0;
 }
 
 main .inner{
-    width: 60%; height: 70%; 
+    width: 80%; height: 90%; 
     margin: 0 auto;
     box-sizing: border-box;
-    
+    background-image : url("img/main/wood.jpg");
+
     position: relative;
 }
 
@@ -15,8 +16,6 @@ main .inner .menu{
 /*    width: 20%; */
     position: absolute;
     top: 50%; left: 50%; transform: translate(-50%, -50%);
-    
-/*    background-color: red;*/
 }
 
 .menu li{
@@ -24,7 +23,13 @@ main .inner .menu{
     padding: 10px 0;
 }
 
+.menu li a{
+    font-size: 25px;
+    color: white;
+}
+
 .menu li a:hover{
     color: white;
     background-color: black;
 }
+

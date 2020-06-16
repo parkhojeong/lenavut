@@ -1,0 +1,7 @@
+.HIDDEN{
+    display: none;
+}
+.SHOW{
+    display: block;
+    cursor: pointer;
+}
