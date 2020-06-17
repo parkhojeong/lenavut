@@ -12,24 +12,74 @@ const ringFolder =
     ];
 const body = document.querySelector("body");
 
+
 function closeEventHandle(event){
     if(event.target.id === 'modal')
         body.removeChild(body.childNodes[0]);
-    console.log(event);
-    console.log(event.target.id);
+
 }
 
-function clickEventHandle(event){
-    const modal = document.createElement("li");
-    const li = event.target.parentElement;
+function appendSlideElement_prev_next(div_slideshow_container){
+    var a = document.createElement("a");
+    a.classList.add("prev");
+    a.setAttribute("onclick","minusSlide()");
+    a.innerHTML = "&#10094;";
+    div_slideshow_container.appendChild(a);
 
-    const ul = li.parentElement;
-    li.childNodes.forEach(function(img){
-        modal.appendChild(img.cloneNode(true));
+    a = document.createElement("a");
+    a.classList.add("next");
+    a.setAttribute("onclick","plusSlide()");
+    a.innerHTML = "&#10095;";
+    div_slideshow_container.appendChild(a);
+}
+function appendSlideElement_dots(div_slideshow_container){
+    var div = document.createElement("div");
+    div.classList.add("dots");
+    div_slideshow_container.childNodes.forEach(function(node, i){
+        if(node.classList.contains("mySlides")){
+
+            var span = document.createElement("span");
+            span.classList.add("dot");
+            span.setAttribute("onclick","showSlides("+i+")");
+            div.appendChild(span);
+        }else{
+            ;
+        }
     });
-    modal.id = "modal";
-    body.prepend(modal);
+
+    div_slideshow_container.appendChild(div);
+}
+
+
+function clickEventHandle(event){
+    const div_modal = document.createElement("div");
+    const div_slideshow_container = document.createElement("div");
+    
+    const li = event.target.parentElement;
+    const ul = li.parentElement;
+
+    div_modal.id = "modal";
+    div_slideshow_container.classList.add("slideshow-container");
+    li.childNodes.forEach(function(img, i){
+        const div = document.createElement("div");
+        // i == 0 ? div.style.display = "block" : div.style.display="none";
+        
+        
+        div.classList.add("mySlides");
+        const img_clone = img.cloneNode(true);
+        img_clone.classList.remove("SHOW");
+        img_clone.classList.remove("HIDDEN");
+        div.appendChild(img_clone);
+        div_slideshow_container.appendChild(div);
+    });
+
+    appendSlideElement_prev_next(div_slideshow_container);
+    appendSlideElement_dots(div_slideshow_container);
+
+    div_modal.appendChild(div_slideshow_container);
+    body.prepend(div_modal);
     modal.addEventListener("click", closeEventHandle);
+    showSlides(0);
 }
 
 function getRing(){
