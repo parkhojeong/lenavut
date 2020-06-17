@@ -10,6 +10,23 @@ const ringFolder =
         {name:"unconnected ring",   number:6},
         {name:"wood ring c",        number:2}
     ];
+
+const detail_info = 
+    {        
+        "basic ring"    : {price:"25000", material: "sterling_silver"},
+        "g rogo ring"   : {price:"25000", material: "sterling_silver"},
+        "key ring"      : {price:"25000", material: "sterling_silver"},
+        "scratch ring"  : {price:"25000", material: "sterling_silver"},
+        "unconnected ring": {price:"25000", material: "sterling_silver"},
+        "wood ring c"   : {price:"25000", material: "sterling_silver"}
+        
+    }
+const material_info = 
+    {
+        sterling_silver: "순도 92.5%의 은과 구리를 섞어 순은보다 강도가 높고 무르지 않습니다. (은제품은 특성상 변색이 생길 수 있습니다.)"
+    }
+    
+
 const body = document.querySelector("body");
 
 
@@ -32,6 +49,7 @@ function appendSlideElement_prev_next(div_slideshow_container){
     a.innerHTML = "&#10095;";
     div_slideshow_container.appendChild(a);
 }
+
 function appendSlideElement_dots(div_slideshow_container){
     var div = document.createElement("div");
     div.classList.add("dots");
@@ -50,6 +68,53 @@ function appendSlideElement_dots(div_slideshow_container){
     div_slideshow_container.appendChild(div);
 }
 
+function appendSlideElement_texts(div_slideshow_container){
+    var dl = document.createElement("dl");
+    
+    var div = document.createElement("div");
+    var dt = document.createElement("dt");
+    var dd = document.createElement("dd");
+    div.classList.add("text");
+    dt.classList.add("key");
+    dd.classList.add("value");
+    const name = div_slideshow_container.childNodes[0].childNodes[0].alt;
+    dt.innerText = "제품명: ";
+    dd.innerText = name;
+    console.log();
+    div.appendChild(dt);
+    div.appendChild(dd);
+    dl.appendChild(div);
+
+    div = document.createElement("div");
+    dt = document.createElement("dt");
+    dd = document.createElement("dd");
+    div.classList.add("text");
+    dt.classList.add("key");
+    dd.classList.add("value");
+    dt.innerText = "가격: ";
+    dd.innerText = detail_info[name]['price'];
+    div.appendChild(dt);
+    div.appendChild(dd);
+    dl.appendChild(div);
+    
+    div = document.createElement("div");
+    dt = document.createElement("dt");
+    dd = document.createElement("dd");
+    div.classList.add("text");
+    dt.classList.add("key");
+    dd.classList.add("value");
+    dt.innerText = '재질: ';
+    const material_name = detail_info[name]['material'];
+    dd.innerText = material_name + " \n"+ material_info[material_name];
+    div.appendChild(dt);
+    div.appendChild(dd);
+    dl.appendChild(div);
+
+    dl.classList.add("texts");
+    
+
+    div_slideshow_container.appendChild(dl);
+}
 
 function clickEventHandle(event){
     const div_modal = document.createElement("div");
@@ -64,7 +129,6 @@ function clickEventHandle(event){
         const div = document.createElement("div");
         // i == 0 ? div.style.display = "block" : div.style.display="none";
         
-        
         div.classList.add("mySlides");
         const img_clone = img.cloneNode(true);
         img_clone.classList.remove("SHOW");
@@ -75,6 +139,7 @@ function clickEventHandle(event){
 
     appendSlideElement_prev_next(div_slideshow_container);
     appendSlideElement_dots(div_slideshow_container);
+    appendSlideElement_texts(div_slideshow_container);
 
     div_modal.appendChild(div_slideshow_container);
     body.prepend(div_modal);
