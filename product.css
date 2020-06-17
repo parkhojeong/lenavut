@@ -1,46 +1,100 @@
-main{
-    height: 850px; 
-    padding: 80px 50px 0;
-    
-    position: relative;
-}
+
+
+
 /* aside */
 main .aside{
-    position: absolute;
     list-style: none;
     padding: 10px;
 }
 main .aside li{
     margin: 10px;
-    
 }
 main .aside a:hover{
     color: white;
     background-color: black;
 }
+@media screen and (max-width:1279px){
+    main{
+        padding: 40px 3% 0;
+    }
+
+    main .aside{
+        position: relative;
+        display: block;
+        height: 100px;;
+        text-align: center;
+    }
+    main .aside li{
+        display: inline-block;
+    }
+}
+@media screen and (min-width:1280px){
+    main{
+        /* height: 850px;  */
+        padding: 80px 50px 0;
+    }
+    main .aside{
+        position: absolute;
+    }
+}
+
 
 /*item*/
+@media screen and (max-width:999px){
+   
+
+    main .js-itemList{
+        width: 100% ;
+    }
+
+    main .js-itemList li{
+        width: 32.5%;
+        height: 32.5vw;
+        /* object-fit:contain; */
+        margin-bottom: 1%;
+    }
+
+    main .js-itemList li:nth-of-type(3n+1),
+    main .js-itemList li:nth-of-type(3n+2){
+        margin-right: 1%;
+    }
+}
+@media screen and (min-width:1000px){
+    
+    
+    main .js-itemList{
+        width: 900px; 
+    }
+
+    main .js-itemList li{
+        width: 290px;
+        height: 290px;
+        object-fit:contain;
+        margin-bottom: 10px;
+    }
+    main .js-itemList li:nth-of-type(3n+1),
+    main .js-itemList li:nth-of-type(3n+2){
+        margin-right: 10px;
+    }
+}
+
+main{
+    position: relative;
+}
+
 main .js-itemList{
-    width: 900px; 
-    height: 2500px; 
     margin: 0 auto;
     position: relative;
 }
-main .js-itemList li{
-    width: 290px;
-    height: 290px;
-    object-fit:contain;
-    margin-bottom: 10px;
-    
+
+main .js-itemList li{    
     float: left;
 }
+
 main .js-itemList li img{
     /* display: block; */
     width: 100%;
     height: 100%;
 }
-main .js-itemList li:nth-of-type(3n+1),
-main .js-itemList li:nth-of-type(3n+2){
-    margin-right: 10px;
-}
+
 

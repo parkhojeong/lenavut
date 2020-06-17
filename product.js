@@ -23,8 +23,6 @@ function clickEventHandle(event){
     const modal = document.createElement("li");
     const li = event.target.parentElement;
 
-    // const modal = li.cloneNode(true);
-    
     const ul = li.parentElement;
     li.childNodes.forEach(function(img){
         modal.appendChild(img.cloneNode(true));
@@ -32,7 +30,6 @@ function clickEventHandle(event){
     modal.id = "modal";
     body.prepend(modal);
     modal.addEventListener("click", closeEventHandle);
-    
 }
 
 function getRing(){
