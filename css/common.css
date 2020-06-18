@@ -1,7 +1,20 @@
 .HIDDEN{
     display: none;
+
 }
 .SHOW{
     display: block;
     cursor: pointer;
+    
+}
+
+.FADEIN_SHOW{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+.FADEOUT_HIDDEN{
+    visibility: hidden;
+    width: 0; height: 0;
+    opacity: 0;
 }

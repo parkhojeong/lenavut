@@ -34,8 +34,10 @@ function showSlides(n) {
 
     /* initialize display*/
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-   
+        // slides[i].style.display = "none";  
+        slides[i].classList.remove("FADEIN_SHOW");
+        slides[i].classList.add("FADEOUT_HIDDEN");
+
         console.dir(slides[i].children[0]);
     }
     for (i = 0; i < dots.length; i++) {
@@ -45,7 +47,9 @@ function showSlides(n) {
     /* assign display*/
 
     
-    slides[slideIndex].style.display = "block";  
+    // slides[slideIndex].style.display = "block";
+    slides[slideIndex].classList.remove("FADEOUT_HIDDEN");  
+    slides[slideIndex].classList.add("FADEIN_SHOW");
     dots[slideIndex].className += " active";
     
 }

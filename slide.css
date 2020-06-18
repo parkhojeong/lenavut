@@ -1,3 +1,4 @@
+/* modal background */
 #modal{
   width: 100%; height: 100%;
   /* position: relative; */
@@ -5,8 +6,6 @@
   position: fixed;
   z-index: 5;
 }
-
-.mySlides {display: none}
 
 /* Slideshow container */
 .slideshow-container {
@@ -21,7 +20,12 @@
   /* z-index: 20; */
   /* margin: 100px auto; */
 }
+/* image container */
+.mySlides{
+  /* background-color: gray; */
+} 
 
+/* slide image */
 .slideshow-container img{
   width: 500px;
   height: 500px;
@@ -64,7 +68,8 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-
+  position: relative;
+  z-index: 10;
 }
 
 .active{

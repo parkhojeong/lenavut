@@ -5,6 +5,7 @@ main .aside{
 }
 main .aside li{
     margin: 10px;
+    font-size: 20px;
 }
 main .aside a:hover{
     color: white;
@@ -34,7 +35,6 @@ main .aside a:hover{
         position: absolute;
     }
 }
-
 
 /*item*/
 @media screen and (max-width:999px){
