@@ -1,6 +1,6 @@
 const ITEMS = document.querySelector(".js-itemList");
 
-const BASE_URL = "img/Product/Product/";
+var BASE_URL = "img/Product/Product/";
 const ringFolder =
     [
         {name:"basic ring",         number:2},
@@ -27,7 +27,7 @@ const detail_info =
         "wood ring c"   : {price:"25000", material: "sterling_silver"},
         "basic necklace": {price:"30000", material: "sterling_silver"}
     }
-const material_info = 
+var material_info = 
     {
         sterling_silver: "순도 92.5%의 은과 구리를 섞어 순은보다 강도가 높고 무르지 않습니다. (은제품은 특성상 변색이 생길 수 있습니다.)"
     }
@@ -40,93 +40,82 @@ function closeEventHandle(event){
 
 }
 
-function appendSlideElement_prev_next(div_slideshow_container){
+function appendSlideElement_prev(div_slideshow_container){
     var a = document.createElement("a");
     a.classList.add("prev");
     a.setAttribute("onclick","minusSlide()");
     a.innerHTML = "&#10094;";
     div_slideshow_container.appendChild(a);
+}
 
-    a = document.createElement("a");
+function appendSlideElement_next(div_slideshow_container){
+    var a = document.createElement("a");
     a.classList.add("next");
     a.setAttribute("onclick","plusSlide()");
     a.innerHTML = "&#10095;";
     div_slideshow_container.appendChild(a);
 }
 
+function makeDot(i){
+    var span = document.createElement("span");
+    span.classList.add("dot");
+    span.setAttribute("onclick","showSlides("+i+")");
+    return span;
+}
+
 function appendSlideElement_dots(div_slideshow_container){
-    var div = document.createElement("div");
-    div.classList.add("dots");
+    var dots = document.createElement("div");
+    dots.classList.add("dots");
     div_slideshow_container.childNodes.forEach(function(node, i){
         if(node.classList.contains("mySlides")){
-
-            var span = document.createElement("span");
-            span.classList.add("dot");
-            span.setAttribute("onclick","showSlides("+i+")");
-            div.appendChild(span);
-        }else{
-            ;
+            const dot = makeDot(i);
+            dots.appendChild(dot);
         }
     });
-    div_slideshow_container.appendChild(div);
+    div_slideshow_container.appendChild(dots);
+}
+
+function appendDiv(dl, dt_innerText, dd_innerText){
+
+    var div = document.createElement("div");
+    var dt = document.createElement("dt");
+    var dd = document.createElement("dd");
+
+    div.classList.add("text");
+    dt.classList.add("key");
+    dd.classList.add("value");
+
+    dt.innerText = dt_innerText;
+    dd.innerText = dd_innerText;
+
+    div.appendChild(dt);
+    div.appendChild(dd);
+    dl.appendChild(div);
 }
 
 function appendSlideElement_texts(div_slideshow_container){
     var dl = document.createElement("dl");
-    
-    var div = document.createElement("div");
-    var dt = document.createElement("dt");
-    var dd = document.createElement("dd");
-    div.classList.add("text");
-    dt.classList.add("key");
-    dd.classList.add("value");
-    const name = div_slideshow_container.childNodes[0].childNodes[0].alt;
-    dt.innerText = "제품명: ";
-    dd.innerText = name;
-    console.log();
-    div.appendChild(dt);
-    div.appendChild(dd);
-    dl.appendChild(div);
-
-    div = document.createElement("div");
-    dt = document.createElement("dt");
-    dd = document.createElement("dd");
-    div.classList.add("text");
-    dt.classList.add("key");
-    dd.classList.add("value");
-    dt.innerText = "가격: ";
-    dd.innerText = detail_info[name]['price'];
-    div.appendChild(dt);
-    div.appendChild(dd);
-    dl.appendChild(div);
-    
-    div = document.createElement("div");
-    dt = document.createElement("dt");
-    dd = document.createElement("dd");
-    div.classList.add("text");
-    dt.classList.add("key");
-    dd.classList.add("value");
-    dt.innerText = '재질: ';
-    const material_name = detail_info[name]['material'];
-    dd.innerText = material_name + " \n"+ material_info[material_name];
-    div.appendChild(dt);
-    div.appendChild(dd);
-    dl.appendChild(div);
-
     dl.classList.add("texts");
-    
+
+    const product_name = div_slideshow_container.childNodes[0].childNodes[0].alt;
+    const material_name = detail_info[product_name]['material'];
+    const dd_innerText = material_name + " \n"+ material_info[material_name];
+
+    appendDiv(dl, "제품명", product_name);
+    appendDiv(dl, "가격", detail_info[product_name]['price']);
+    appendDiv(dl, "재질", dd_innerText);
+
     div_slideshow_container.appendChild(dl);
 }
 
 function clickEventHandle(event){
     const div_modal = document.createElement("div");
     const div_slideshow_container = document.createElement("div");
-    
     const li = event.target.parentElement;
-    const ul = li.parentElement;
 
     div_modal.id = "modal";
     div_slideshow_container.classList.add("slideshow-container");
+
     li.childNodes.forEach(function(img, i){
         const div = document.createElement("div");
         // i == 0 ? div.style.display = "block" : div.style.display="none";
@@ -135,17 +124,19 @@ function clickEventHandle(event){
         const img_clone = img.cloneNode(true);
         img_clone.classList.remove("SHOW");
         img_clone.classList.remove("HIDDEN");
+
         div.appendChild(img_clone);
         div_slideshow_container.appendChild(div);
     });
 
-    appendSlideElement_prev_next(div_slideshow_container);
+    appendSlideElement_prev(div_slideshow_container);
+    appendSlideElement_next(div_slideshow_container);
     appendSlideElement_dots(div_slideshow_container);
     appendSlideElement_texts(div_slideshow_container);
 
     div_modal.appendChild(div_slideshow_container);
+    div_modal.addEventListener("click", closeEventHandle);
     body.prepend(div_modal);
-    modal.addEventListener("click", closeEventHandle);
     showSlides(0);
 }
 
@@ -153,7 +144,7 @@ function getRing(){
     const rings = [];
         
     ringFolder.forEach(function(obj){
-        const ring = [];
+    const ring = [];
        for(var i = 1; i< obj.number+1; i++){
            const image = new Image();
            const src = "ring/" + obj.name + "/" + i + ".jpg";
@@ -189,4 +180,3 @@ function init(){
 }
 
 init();
-
