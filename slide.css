@@ -7,6 +7,23 @@
   z-index: 5;
 }
 
+#modal:after{
+  content: '';
+  /* background: red; */
+  background-image: url(img/icon/x.png);
+  background-size: contain;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10PX;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  /* z-index: 100; */
+}
+
 /* Slideshow container */
 .slideshow-container {
   position: absolute;
@@ -86,7 +103,7 @@ dl{
   position: absolute;
   top: 0;
   left: 100%;
-  padding: 20px;
+  padding: 40px 20px 0;
   word-break: keep-all;
 }
 dl .text{
@@ -96,12 +113,12 @@ dl .text{
 dt,
 dd
 {
-  font-size: 20px;
+  font-size: 17px;
   display: inline;
 }
 
 dt{
   /* float: left; */
   margin: 5px 0;
-  dis
+  
 }

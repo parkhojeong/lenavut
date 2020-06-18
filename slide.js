@@ -37,15 +37,12 @@ function showSlides(n) {
         // slides[i].style.display = "none";  
         slides[i].classList.remove("FADEIN_SHOW");
         slides[i].classList.add("FADEOUT_HIDDEN");
-
-        console.dir(slides[i].children[0]);
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
   
     /* assign display*/
-
     
     // slides[slideIndex].style.display = "block";
     slides[slideIndex].classList.remove("FADEOUT_HIDDEN");  
@@ -55,7 +52,7 @@ function showSlides(n) {
 }
 
 function init(){
-    
+    init_index();
 }
 
 init();

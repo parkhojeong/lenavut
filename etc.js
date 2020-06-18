@@ -1,6 +1,7 @@
 function init(){
-    const items = getItems(ringFolder, "ring");
+    const items = getItems(etcFolder, "etc");
     appendItems(items);
+    
 }
 
 init();
