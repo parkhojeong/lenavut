@@ -1,4 +1,4 @@
-/* aside */
+/* ----------aside part start-----------*/
 main .aside{
     list-style: none;
     padding: 10px;
@@ -11,6 +11,8 @@ main .aside a:hover{
     color: white;
     background-color: black;
 }
+
+/* aside layout change*/
 @media screen and (max-width:1279px){
     main{
         padding: 40px 3% 0;
@@ -35,8 +37,11 @@ main .aside a:hover{
         position: absolute;
     }
 }
+/* ----------aside part end-----------*/
 
-/*item*/
+
+/*------------ image part start--------------*/
+/* item size change */
 @media screen and (max-width:999px){
     main .js-itemList{
         width: 100% ;
@@ -92,3 +97,4 @@ main .js-itemList li img{
 }
 
 
+/*------------ image part end--------------*/
