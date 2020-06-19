@@ -36,7 +36,7 @@
 @media screen and (max-width: 480px){
   .slideshow-container{
     width: 100%;
-    top: 30%;
+    top: 20%;
   }
   .slideshow-container img{
     width: 100%;
