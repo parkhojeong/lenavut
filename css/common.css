@@ -18,3 +18,15 @@
     width: 0; height: 0;
     opacity: 0;
 }
+
+.BLUR_BUTTON{
+    display: inline-block;
+    /* font-size: 18px;  */
+    font-size: 1.1em;
+    color: #4745a0;
+
+}
+
+.BLUR_BUTTON:hover{
+    color: black;
+}
