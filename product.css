@@ -1,4 +1,9 @@
 /* ----------aside part start-----------*/
+main{
+    overflow: hidden;
+
+}
+
 main .aside{
     list-style: none;
     padding: 10px;
