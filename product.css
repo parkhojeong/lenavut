@@ -1,9 +1,7 @@
 /* ----------aside part start-----------*/
 main{
-    overflow: hidden;
-
+    
 }
-
 main .aside{
     list-style: none;
     padding: 10px;
@@ -51,32 +49,42 @@ main .aside a:hover{
 
 /*------------ image part start--------------*/
 /* item size change */
+
+main{
+    position: relative;
+    overflow: hidden;
+}
+
+main .js-itemList{
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+main .js-itemList li{    
+    float: left;
+}
+
+main .js-itemList li img{
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width:900px){
-
-    main {
-        /* background-color: blue;; */
-    }
-
     main .aside{
         margin-bottom: 20px;
     }
     main .aside li{
-        /* margin-right: 5%; */
         font-size: 16px;
     }
     main .js-itemList{
         font-size: 0;
         width: 100% ;
-        /* min-width: 600px; */
-        /* background: red;; */
     }
 
     main .js-itemList li{
         width: 33%;
         height: 32.5vw;
-        /* object-fit:contain; */
         margin-bottom: 0.5%;
-        /* background: red;; */
     }
 
     main .js-itemList li:nth-of-type(3n+1),
@@ -92,33 +100,13 @@ main .aside a:hover{
     main .js-itemList li{
         width: 290px;
         height: 290px;
-        object-fit:contain;
+        /* object-fit:contain; */
         margin-bottom: 10px;
     }
     main .js-itemList li:nth-of-type(3n+1),
     main .js-itemList li:nth-of-type(3n+2){
         margin-right: 10px;
     }
-}
-
-main{
-    position: relative;
-}
-
-main .js-itemList{
-    margin: 0 auto;
-    position: relative;
-    
-}
-
-main .js-itemList li{    
-    float: left;
-}
-
-main .js-itemList li img{
-    /* display: block; */
-    width: 100%;
-    height: 100%;
 }
 
 
