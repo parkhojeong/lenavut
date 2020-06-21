@@ -1,5 +1,6 @@
 main .inner{
     word-break: keep-all;
+    text-align: left;
 }
 
 @media screen and (max-width:480px){
@@ -8,7 +9,6 @@ main .inner{
         padding: 50px 30px;
         /* padding-top: 100px;
         padding-bottom: 170px; */
-        text-align: center;
         font-size: 11px;
         
     }
@@ -22,9 +22,10 @@ main .inner{
 @media screen and (min-width:481px){
 
     main .inner{
+        width: 770px;
+        margin: 0 auto;
         padding-top: 100px;
         padding-bottom: 170px;
-        text-align: center;
     }
 
     main .inner .line{
