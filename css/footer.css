@@ -21,7 +21,7 @@ footer .line2{
 
 @media screen and (max-width:480px){
     footer span{
-        margin-right: 13px;
+        /* margin-right: 13px; */
         font-size: 12px;
     }
     footer .line1 span:nth-child(2)::before{

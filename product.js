@@ -35,27 +35,27 @@ const etcFolder =
 const detail_info = 
     {        
         //necklace
-        "basic necklace": {price:"30000", material: "sterling_silver"},
+        "basic necklace": {price:"30,000", material: "SILVER 92.5"},
 
         //bracelet
-        "basic bracelet": {price:"30000", material: "sterling_silver"},
+        "basic bracelet": {price:"30,000", material: "SILVER 92.5"},
 
         //ring
-        "basic ring"    : {price:"25000", material: "sterling_silver"},
-        "g rogo ring"   : {price:"25000", material: "sterling_silver"},
-        "key ring"      : {price:"25000", material: "sterling_silver"},
-        "scratch ring"  : {price:"25000", material: "sterling_silver"},
-        "unconnected ring": {price:"25000", material: "sterling_silver"},
-        "wood ring c"   : {price:"25000", material: "sterling_silver"},
+        "basic ring"    : {price:"25,000", material: "SILVER 92.5"},
+        "g rogo ring"   : {price:"25,000", material: "SILVER 92.5"},
+        "key ring"      : {price:"25,000", material: "SILVER 92.5"},
+        "scratch ring"  : {price:"25,000", material: "SILVER 92.5"},
+        "unconnected ring": {price:"25,000", material: "SILVER 92.5"},
+        "wood ring c"   : {price:"25,000", material: "SILVER 92.5"},
 
         //etc
-        "igloo"     :{price:"25000", material: "sterling_silver"}
+        "igloo"     :{price:"25,000", material: "SILVER 92.5"}
     }
 
 // common use info 
 var material_info = 
     {
-        sterling_silver: "순도 92.5%의 은과 구리를 섞어 순은보다 강도가 높고 무르지 않습니다. (은제품은 특성상 변색이 생길 수 있습니다.)"
+        "SILVER 92.5": "열쇠 형상을 하고 있는 반지입니다."
     }
     
 // modal background click event    
@@ -132,9 +132,9 @@ function appendSlideElement_texts(div_slideshow_container){
     const material_name = detail_info[product_name]['material'];
     const dd_innerText = material_name + " \n"+ material_info[material_name];
 
-    appendDiv(dl, "제품명: ", product_name);
-    appendDiv(dl, "가격: ", detail_info[product_name]['price']);
-    appendDiv(dl, "재질: ", dd_innerText);
+    appendDiv(dl, " ", product_name);
+    appendDiv(dl, "PRICE : ", detail_info[product_name]['price']);
+    appendDiv(dl, "MATERIAL INFO : ", dd_innerText);
 
     div_slideshow_container.appendChild(dl);
 }
