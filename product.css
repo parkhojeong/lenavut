@@ -70,6 +70,10 @@ main .js-itemList li img{
 }
 
 @media screen and (max-width:900px){
+    main{
+        padding: 30px 0 0;
+    }
+
     main .aside{
         margin-bottom: 20px;
     }

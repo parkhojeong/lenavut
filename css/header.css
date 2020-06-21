@@ -12,16 +12,20 @@ header h2{
 
 @media screen and (max-width: 480px){
     header{
-        height: 100px;
+        /* padding: 50px; */
+        /* margin: 50px 0; */
+        height: 70px;
+        /* margin-bottom: 50px; */
+        /* padding: 40px 0; */
     }
-
     header h2{
         font-size: 30px; 
     }
 }
 @media screen and (min-width: 480px){
     header{
-        height: 150px;
+        height: 35px;
+        padding: 60px 0;
     }
     header h2{
         font-size: 35px; 

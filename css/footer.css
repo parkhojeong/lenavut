@@ -10,8 +10,8 @@ footer .line2{
 
 @media screen and (max-width:480px){
     footer{
-        margin-top: 40px;
-        padding: 15px 0px 0px;
+        /* margin-top: 40px; */
+        padding: 55px 0px 0px;
         font-size: 12px;
     }
     footer .line1 span:nth-child(2)::before{
@@ -27,8 +27,8 @@ footer .line2{
 }
 @media screen and (min-width:481px){
     footer{
-        margin-top: 70px;
-        padding: 15px 0px 0px;
+        /* margin-top: 70px; */
+        padding: 85px 0px 0px;
         font-size: 14px;
     }    
     footer .line1{

@@ -36,7 +36,7 @@
 @media screen and (max-width: 480px){
   .slideshow-container{
     width: 100%;
-    top: 20%;
+    top: 13%;
   }
   .slideshow-container img{
     width: 100%;
@@ -130,10 +130,21 @@ dd
     width: 100%;
     top: 100%;
     padding: 10px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  dl .text:nth-child(1),
+  dl .text:nth-child(2),
+  dl .text:nth-child(3){
+    display: inline-block;
+    margin-right: 20px;
+  }
+  hr{
+    margin: 5px 0;
   }
   dt,
   dd{
-    font-size: 14px;
+    
   }
   dt{
     margin: 3px 0; 
@@ -147,6 +158,8 @@ dd
     top: 0;
     left: 100%;
     padding: 40px 20px 0;
+
+    font-size: 17px;
   }
   dl .text{
     margin-bottom: 15px;
@@ -154,7 +167,7 @@ dd
   }
   dt,
   dd{
-    font-size: 17px;
+
   }
   dt{
     margin: 5px 0; 
