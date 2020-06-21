@@ -1,0 +1,30 @@
+@media screen and (max-width:480px){
+
+    main .inner{
+        padding: 50px 30px;
+        /* padding-top: 100px;
+        padding-bottom: 170px; */
+        text-align: center;
+        font-size: 13px;
+        
+    }
+
+    main .inner .line{
+        display: block;
+        margin-bottom: 20px;
+        word-break: keep-all;
+    }
+}
+@media screen and (min-width:481px){
+
+    main .inner{
+        padding-top: 100px;
+        padding-bottom: 170px;
+        text-align: center;
+    }
+
+    main .inner .line{
+        display: block;
+        margin-bottom: 20px;
+    }
+}
