@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
    /* border: 1px solid gray; */
-   font-family: 'Noto Sans KR', sans-serif;
+   font-family: Helvetica, 'Noto Sans KR', sans-serif;
+   
    color: #272525;
 }
 
@@ -16,6 +17,7 @@ a{
     color: inherit;
 }
 
-/* main{
-    height: 65vh;
-} */
+@font-face {
+    font-family: Helvetica;
+    src: url("font/HelveticaLTStd-Blk.otf") format("opentype");
+}

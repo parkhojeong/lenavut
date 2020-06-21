@@ -35,21 +35,21 @@ const etcFolder =
 const detail_info = 
     {        
         //necklace
-        "basic necklace": {price:"30,000", material: "SILVER 92.5"},
+        "basic necklace": {price:"30,000", material: "SILVER 92.5", detail_info_text: ""},
 
         //bracelet
-        "basic bracelet": {price:"30,000", material: "SILVER 92.5"},
+        "basic bracelet": {price:"30,000", material: "SILVER 92.5", detail_info_text: ""},
 
         //ring
-        "basic ring"    : {price:"25,000", material: "SILVER 92.5"},
-        "g rogo ring"   : {price:"25,000", material: "SILVER 92.5"},
-        "key ring"      : {price:"25,000", material: "SILVER 92.5"},
-        "scratch ring"  : {price:"25,000", material: "SILVER 92.5"},
-        "unconnected ring": {price:"25,000", material: "SILVER 92.5"},
-        "wood ring c"   : {price:"25,000", material: "SILVER 92.5"},
+        "basic ring"    : {price:"25,000", material: "SILVER 92.5", detail_info_text: "착용시 다양한 느낌을 낼 수 있는 기본 은 반지 입니다. 두께는 1.5mm입니다."},
+        "g rogo ring"   : {price:"25,000", material: "SILVER 92.5", detail_info_text: "알파벳 G 로고가 들어가 반지 입니다. 로고 알파벳은 변경 가능합니다."},
+        "key ring"      : {price:"25,000", material: "SILVER 92.5", detail_info_text: "열쇠의 형상을 한 반지 입니다."},
+        "scratch ring"  : {price:"25,000", material: "SILVER 92.5", detail_info_text: "반지 표면의 디테일을 왁스상태에서 스크랫치 표현을 한 반지입니다. 반지 두께는 약 1.8mm입니다."},
+        "unconnected ring": {price:"25,000", material: "SILVER 92.5", detail_info_text: "연결이 끊겨 오픈링 형식의 반지 입니다. 두개를 겹쳐 색다를 느낌을 낼수 있습니다. 반지 두께는 약 1.5mm입니다."},
+        "wood ring c"   : {price:"25,000", material: "SILVER 92.5", detail_info_text: "실제 앵두나무 가지를 이용하여 제작여 실제 나무의 디테일한 표현이 눈에 띄는 반지입니다. 반지 두께는 약 1.5mm입니다."},
 
         //etc
-        "igloo"     :{price:"25,000", material: "SILVER 92.5"}
+        "igloo"     :{price:"25,000", material: "SILVER 92.5", detail_info_text: "BRASS 재질을 사용하여 제작된 이글루 인센스 홀더입니다. 크기는 가로*세로(5*5) 입니다. 녹는 이글루와, 기본 이글루 두가지 버전이 있습니다."}
     }
 
 // common use info 
@@ -123,6 +123,20 @@ function appendDiv(dl, dt_innerText, dd_innerText){
     dl.appendChild(div);
 }
 
+function appendATag(dl, innerText, class_name, href){
+    const a = document.createElement("a");
+    a.innerText = innerText;
+    a.classList.add(class_name, "text");
+    a.href = href;
+    dl.appendChild(a);
+}
+
+function appendHrTag(dl){
+    const hr = document.createElement("hr");
+    hr.classList.add("text");
+    dl.appendChild(hr);
+}
+
 // append text-area 
 function appendSlideElement_texts(div_slideshow_container){
     var dl = document.createElement("dl");
@@ -134,7 +148,10 @@ function appendSlideElement_texts(div_slideshow_container){
 
     appendDiv(dl, " ", product_name);
     appendDiv(dl, "PRICE : ", detail_info[product_name]['price']);
+    appendATag(dl, "Buy", "blackFont-hover-reserval", "");
+    appendHrTag(dl);
     appendDiv(dl, "MATERIAL INFO : ", dd_innerText);
+    appendDiv(dl, "DETAIL INFO : ", detail_info[product_name]["detail_info_text"]);
 
     div_slideshow_container.appendChild(dl);
 }

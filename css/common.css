@@ -37,3 +37,13 @@
 .RELATIVE{
     position: relative;
 }
+
+.blackFont-hover-reserval{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.blackFont-hover-reserval:hover{
+    color: white;
+    background-color: black;
+}
