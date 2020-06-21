@@ -1,3 +1,7 @@
+main .inner{
+    word-break: keep-all;
+}
+
 @media screen and (max-width:480px){
 
     main .inner{
