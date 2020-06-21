@@ -21,7 +21,7 @@ footer .line2{
 
 @media screen and (max-width:480px){
     footer span{
-        margin-right: 13px;
+        
         font-size: 12px;
     }
     footer .line1 span:nth-child(2)::before{
@@ -31,20 +31,23 @@ footer .line2{
         content:'';
         display: block;
     }
-
+    footer .BLUR_BUTTON{
+        margin-right: 13px;
+    }
 }
 @media screen and (min-width:481px){
     footer span{
         /* margin-right: 20px; */
     }
-    footer .BLUR_BUTTON{
-        margin-right: 20px;
-    }
+    
 
     footer .line1{
         margin-bottom: 5px;
     }
     footer .line1 span+span::before{
         content:'/';
+    }
+    footer .BLUR_BUTTON{
+        margin-right: 20px;
     }
 }
