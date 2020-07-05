@@ -40,10 +40,13 @@
 
 .blackFont-hover-reserval{
     display: inline-block;
+    padding: 2px 5px;
     cursor: pointer;
+    color: white;
+    background-color: black;
 }
 
 .blackFont-hover-reserval:hover{
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }

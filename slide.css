@@ -27,7 +27,7 @@
 /* mobile version modal size */
 .slideshow-container{
   width: 100%;
-  background-color: #717171;
+  background-color: white;
   /* height: 400px; */
   position: absolute;
   top: 30%;
@@ -57,7 +57,6 @@
   .slideshow-container img{
     width: 500px;
     height: 500px;
-
   }
 }
 /*---- slide container end ----*/
@@ -68,7 +67,7 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  color: white;
+  color: #bbb;
   font-size:25px;
   padding: 10px;
   z-index: 10;;
@@ -82,7 +81,7 @@
 }
 .prev:hover,
 .next:hover{
-  background-color: gray;
+  color: #717171;
 }
 /*----- Next & previous buttons end-----*/
 
@@ -116,7 +115,7 @@
 /*----- text area start -----*/
 dl{
 
-  background: white;;
+  background: white;
   position: absolute;
   word-break: keep-all;
 }
@@ -158,8 +157,9 @@ dd
     top: 0;
     left: 100%;
     padding: 40px 20px 0;
+    /* line-height: 5; */
 
-    font-size: 17px;
+    font-size: 13px;
   }
   dl .text{
     margin-bottom: 15px;
@@ -171,6 +171,15 @@ dd
   }
   dt{
     margin: 5px 0; 
+    
+  }
+  dd{
+    /* margin-top: 0.5em; */
+    margin-left: 1em;
+    display: block;
+    font-size: 12px;
   }
 }
 /*----- text area end -----*/
+
+
