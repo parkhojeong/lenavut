@@ -11,6 +11,7 @@ const necklaceFolder =
 // only bracelet info
 const braceletFolder =
     [
+        {name:"earth pendant",     number:3}
     ];
 
 // only ring info
@@ -26,7 +27,7 @@ const ringFolder =
 // only etc info
 const etcFolder =
     [
-
+        {name:"earth pendant",     number:3}
     ];
 
 // common use info 
@@ -39,6 +40,7 @@ const detail_info =
         "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""},
 
         //bracelet
+        "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""},
 
         //ring
         "basic ring"    : {price:"25,000", material: silver_925, detail_info_text: "착용시 다양한 느낌을 낼 수 있는 기본 은 반지 입니다. 두께는 1.5mm입니다."},
@@ -48,7 +50,7 @@ const detail_info =
         "manchu ring"  : {price:"25,000", material: silver_925, detail_info_text: "반지 표면의 디테일을 왁스상태에서 스크랫치 표현을 한 반지입니다. 반지 두께는 약 1.8mm입니다."},
 
         //etc
-       
+        "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""}
     }
 
 // common use info 
