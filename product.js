@@ -11,7 +11,6 @@ const necklaceFolder =
 // only bracelet info
 const braceletFolder =
     [
-        {name:"manchu bangle", number:2}
     ];
 
 // only ring info
@@ -40,7 +39,6 @@ const detail_info =
         "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""},
 
         //bracelet
-        "manchu bangle": {price:"30,000", material: silver_925, detail_info_text: ""},
 
         //ring
         "basic ring"    : {price:"25,000", material: silver_925, detail_info_text: "착용시 다양한 느낌을 낼 수 있는 기본 은 반지 입니다. 두께는 1.5mm입니다."},
