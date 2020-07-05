@@ -33,24 +33,54 @@ const etcFolder =
 // common use info 
 const silver_925 = "silver 92.5";
 const detail_info = 
-    
-
     {        
         //necklace
-        "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""},
+        "earth pendant": {
+            price:"30,000", 
+            material: silver_925, 
+            detail_info_text: ""
+        },
 
         //bracelet
-        "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""},
+        "earth pendant": {
+            price:"30,000", 
+            material: silver_925, 
+            detail_info_text: ""
+        },
 
         //ring
-        "basic ring"    : {price:"25,000", material: silver_925, detail_info_text: "착용시 다양한 느낌을 낼 수 있는 기본 은 반지 입니다. 두께는 1.5mm입니다."},
-        "g logo ring"   : {price:"25,000", material: silver_925, detail_info_text: "알파벳 G 로고가 들어가 반지 입니다. 로고 알파벳은 변경 가능합니다."},
-        "heart ring"      : {price:"25,000", material: silver_925, detail_info_text: "열쇠의 형상을 한 반지 입니다."},
-        "key ring"  : {price:"25,000", material: silver_925, detail_info_text: "반지 표면의 디테일을 왁스상태에서 스크랫치 표현을 한 반지입니다. 반지 두께는 약 1.8mm입니다."},
-        "manchu ring"  : {price:"25,000", material: silver_925, detail_info_text: "반지 표면의 디테일을 왁스상태에서 스크랫치 표현을 한 반지입니다. 반지 두께는 약 1.8mm입니다."},
+        "basic ring"    : {
+            price:"25,000", 
+            material: silver_925, 
+            detail_info_text: "착용시 다양한 느낌을 낼 수 있는 기본 은 반지 입니다. 두께는 1.5mm입니다."
+        },
+        "g logo ring"   : {
+            price:"75,000", 
+            material: silver_925, 
+            detail_info_text: "알파벳 G 로고가 들어가 반지 입니다. 로고 알파벳은 변경 가능합니다."
+        },
+        "heart ring"      : {
+            price:"25,000", 
+            material: silver_925, 
+            detail_info_text: "열쇠의 형상을 한 반지 입니다."
+        },
+        "key ring"  : {
+            price:"25,000", 
+            material: silver_925, 
+            detail_info_text: "열쇠의 형상을 한 반지 입니다."
+        },
+        "manchu ring"  : {
+            price:"25,000", 
+            material: silver_925, 
+            detail_info_text: ""
+        },
 
         //etc
-        "earth pendant": {price:"30,000", material: silver_925, detail_info_text: ""}
+        "earth pendant": {
+            price:"30,000", 
+            material: silver_925, 
+            detail_info_text: ""
+        }
     }
 
 // common use info 
