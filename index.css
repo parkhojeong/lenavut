@@ -13,7 +13,7 @@
     }
     main .inner{
         width: 80%;
-        height: 35.5vw;
+        height: 65vh;
     }
 }
 main .inner{
@@ -37,17 +37,16 @@ main .inner .menu{
 }
 
 .menu li a{
-    font-size: 25px;
     color: white;
 }
 @media screen and (max-width: 480px){
     .menu li a{
-        font-size: 22px;
+        font-size: 15px;
     }
 }
 @media screen and (min-width: 481px){
     .menu li a{
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 .menu li a:hover{

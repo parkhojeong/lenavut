@@ -147,7 +147,7 @@ function appendSlideElement_texts(div_slideshow_container){
 
     appendDiv(dl, product_name, "");
     appendDiv(dl, "price : "+detail_info[product_name]['price'], "" );
-    appendATag(dl, "buy", "blackFont-hover-reserval", "");
+    appendATag(dl, "buy", "blackFont-hover-reserval", "https://open.kakao.com/o/se5DlxYb");
     appendHrTag(dl);
     appendDiv(dl, "material info\n", dd_innerText);
     appendDiv(dl, "detail info\n", detail_info[product_name]["detail_info_text"]);
