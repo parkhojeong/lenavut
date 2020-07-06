@@ -5,6 +5,7 @@
     main .inner{
         width: 100%;
         height: 100vw;
+        background-image : url("img/main/wood_small.jpg");
     }
 }
 @media screen and (min-width: 481px){
@@ -14,13 +15,13 @@
     main .inner{
         width: 80%;
         height: 65vh;
+        background-image : url("img/main/wood_large.jpg");
     }
 }
 main .inner{
     /* height: 100%;  */
     margin: 0 auto;
     box-sizing: border-box;
-    background-image : url("img/main/wood.jpg");
 
     position: relative;
 }
