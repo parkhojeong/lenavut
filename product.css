@@ -62,11 +62,13 @@ main .js-itemList{
 
 main .js-itemList li{    
     float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .js-itemList li img{
-    width: 100%;
-    height: 100%;
+    width: 30%;
 }
 
 @media screen and (max-width:900px){

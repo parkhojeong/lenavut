@@ -19,5 +19,5 @@ a{
 
 @font-face {
     font-family: Helvetica;
-    src: url("font/HelveticaLTStd-Blk.otf") format("opentype");
+    src: url("../font/HelveticaLTStd-Blk.otf") format("opentype");
 }
