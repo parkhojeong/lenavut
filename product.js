@@ -235,8 +235,13 @@ function appendItems(items){
 function getImage(obj, i, item_type){
     const image = new Image();
     const src = item_type+ "/" + obj.name + "/" + i + ".png";
+    let srcset = item_type+ "/" + obj.name + "/" + i + "_small.png 400w,";
+    srcset += item_type+ "/" + obj.name + "/" + i + "_large.png 1920w,";
+
+
     image.src = BASE_URL+ src;
     image.alt = obj.name;
+    image.srcset = srcset;
     i == 1 ? image.classList.add("SHOW") : image.classList.add("HIDDEN");
     if(i===1) image.addEventListener("click", clickEventHandle);
     return image;

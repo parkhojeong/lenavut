@@ -141,12 +141,13 @@ dd
   hr{
     margin: 5px 0;
   }
-  dt,
-  dd{
-    
-  }
   dt{
     margin: 3px 0; 
+  }
+  dd{
+    margin-left: 1em;
+    display: block;
+    font-size: 12px;
   }
 }
 
