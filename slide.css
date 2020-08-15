@@ -47,8 +47,8 @@
     align-items: center;
   }
   .slideshow-container img{
-    width: 30%;
-    height: 30vw;
+    /* width: 30%;
+    height: 30vw; */
   }
 }
 @media screen and (min-width: 481px){
@@ -67,12 +67,6 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-  }
-
-  /* slide image */
-  .slideshow-container img{
-    width: 30%;
-    height: 30%;
   }
 }
 /*---- slide container end ----*/

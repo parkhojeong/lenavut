@@ -33,7 +33,6 @@ const ringFolder =
 // only etc info
 const etcFolder =
     [
-        {name:"earth pendant",     number:3}
     ];
 
 
@@ -109,11 +108,7 @@ const detail_info =
 
 
 //etc
-"earth pendant": {
-    price:"30,000", 
-    material: silver_925, 
-    detail_info_text: ""
-}
+
 
 
     }
@@ -121,7 +116,7 @@ const detail_info =
 // common use info 
 var material_info = 
     {
-        [silver_925]: "열쇠 형상을 하고 있는 반지입니다.",
+        [silver_925]: "",
         [silver_950]: "",
     }
     
